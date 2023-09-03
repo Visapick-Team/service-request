@@ -1,5 +1,5 @@
 {
-    "name": "Pickmap/ServiceRequest",
+    "name": "pickmap/service-request",
     "description": "A regular structure for sending requests from client to client",
     "type": "library",
     "license": "MIT",    
