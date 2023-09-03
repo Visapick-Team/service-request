@@ -10,7 +10,7 @@ The best usage example is shown in this chart so that you can do the "Request To
 
 ## setp #1
 ```bash
-composer require Pickmap/ServiceRequest
+composer require pickmap/service-request
 ```
 ## setp #2
 Define the following variables in your .env file
