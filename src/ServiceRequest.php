@@ -48,14 +48,14 @@ trait ServiceRequest{
         return array_merge(['Authorization' => self::getToken()],$newHeader);
     }
 
-    public static function post(string $url,array $data = [],$headers = [])
+    public static function requestPost(string $url,array $data = [],$headers = [])
     {
         $headers = self::HeadersProcess($headers);
         $response = Http::withHeaders($headers)->post($url,$data);
         return $response;
     }
 
-    public static function get(string $url,array $data = [],$headers = [])
+    public static function requestGet(string $url,array $data = [],$headers = [])
     {
         $headers = self::HeadersProcess($headers);
         $response = Http::withHeaders($headers)->get($url,$data);
