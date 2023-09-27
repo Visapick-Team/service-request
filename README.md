@@ -30,7 +30,7 @@ use  ServiceRequest;
 
 public  function  aMethod()
 	{
-		self::post('https:://service.com/list');
+		self::requestPost('https:://service.com/list');
 	}
 }
 ```
@@ -46,7 +46,7 @@ Authorization is set in all tokens, but with this method, it is overwritten by t
 */
 self::HeadersProcess($newHeader);
 
-self::post(string  $url,array  $data  = [],$headers  = []);
+self::requestPost(string  $url,array  $data  = [],$headers  = []);
 
-self::get(string  $url,array  $data  = [],$headers  = []);
+self::requestGet(string  $url,array  $data  = [],$headers  = []);
 ```
