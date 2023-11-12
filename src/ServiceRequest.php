@@ -24,13 +24,11 @@ trait ServiceRequest{
     public static function requestToKeyCloak()
     {
         $user = [
-            "client_id"     =>  env('KEYCLOAK_CLIENT_ID'),
-            "client_secret" =>  env('KEYCLOAK_CLIENT_SECRET'),
-            "username"      =>  env('KEYCLOAK_USERNAME'),
-            "password"      =>env('KEYCLOAK_PASSWORD'),
-            "grant_type"    =>'password'
+            "client_id"     =>  env('OAUTH_CLIENT_ID'),
+            "client_secret" =>  env('OAUTH_CLIENT_SECRET'),
+            "grant_type"    =>  'client_credentials'
         ];
-        $keycloakUrl = env('KEYCLOAK_LOGIN_URL');
+        $keycloakUrl = env('OAUTH_TOKEN_URL');
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $keycloakUrl);
