@@ -53,6 +53,20 @@ trait ServiceRequest{
         return $response;
     }
 
+    public static function requestPut(string $url,array $data = [],$headers = [])
+    {
+        $headers = self::HeadersProcess($headers);
+        $response = Http::withHeaders($headers)->put($url,$data);
+        return $response;
+    }     
+
+    public static function requestDelete(string $url,array $data = [],$headers = [])
+    {
+        $headers = self::HeadersProcess($headers);
+        $response = Http::withHeaders($headers)->delete($url,$data);
+        return $response;
+    }  
+    
     public static function requestGet(string $url,array $data = [],$headers = [])
     {
         $headers = self::HeadersProcess($headers);
